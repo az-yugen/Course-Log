@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GENERAL */
+
+
+
+* {
+    font-family: "Inter";
+    background-color: var(--COLORBG);
+}
+
+:root {
+    --COLORBG: rgb(248,246,245);
+    --COLORTEXT: rgb(50, 50, 50);
+    --COLORPLC: #93C11C;
+    --COLORFIO: #FB872B;
+    --COLORADOBE: #ED2224;
+    --COLORBLENDER: #EA7600;
+    --COLORPYTHON: #ffde57;
+    --COLORTKINTER: #29ABE2;
+    --COLORJUPYTER: #646464;
+    --COLORPROTEUS: #23C0EF;
+    --COLORX: lightslategray;
+    /* color-scheme: dark light; */
+    /* --BOOK-B: 50px;
+    --BOOK-H: 280px;
+    --BOOK-W: 190px; */
+}
+
+
+.navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 5%;
+
+}
+
+.title {
+    /* font-size: x-large; */
+    font-weight: 800;
+    color: #282929;
+}
+
+a {
+    color: #0066CC;
+    text-decoration: none;
+}
+
+
+hr {
+    color: lightgray;
+    margin: 0 30%;
+}
+
+
+
+
+/* HOME */
+
+.home-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 10px 5%;
+
+
+}
+
+.container-sidebar {
+    display: flex;
+    flex-flow: column;
+    margin: 0 5% 0 0;
+
+}
+
+.container-entries {
+    margin: 10px 20px;
+    /* border: #646464 solid 2px; */
+    /* border-radius: 2px; */
+}
+
+.entries-main {
+    display: grid;
+    grid-template-columns: 3fr 4fr 2fr 5fr;
+    padding: 2px 2%;
+    text-wrap-mode: nowrap;
+
+}
+
+.entries-main div {
+    padding: 2px 2%;
+}
+
+.entries-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+div > a {
+    font-size: medium;
+}

@@ -1,0 +1,18 @@
+{% extends "course_logs/index.html" %}
+
+{% block content %}
+
+    <div class="new-tag">
+
+        <h4>Register a new Course: </h4>
+
+        <form action="{% url 'course_logs:new_course' %}" method='post'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button name="submit">Add Course</button>
+        </form>
+
+    </div>
+
+
+{% endblock content %}

@@ -1,0 +1,38 @@
+
+<div class="navbar">
+
+    <div >
+        <a href="/">
+            <h2 class="title" > COURSE LOG</h2>
+        </a>
+    </div>
+    
+    
+    <div>
+        <p>
+            {% if user.is_authenticated %}
+                {{user.username}} |
+                <a href="{% url 'users:logout' %}">Log out</a>
+            {% else %}
+                <a href="{% url 'users:login' %}">Log in</a> |
+                <a href="{% url 'users:register' %}">Register</a>
+            {% endif %}
+        </p>
+    </div>
+
+</div>
+
+
+
+{% comment %} <form method="GET" action="{% url 'home' %}">
+    <input type="text" name="q" placeholder="Search Rooms...">
+</form> {% endcomment %}
+
+{% comment %} {% if request.user.is_authenticated %}
+<p>Hello {{request.user}} ! </p>
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+<a href="{% url 'login' %}">Login</a>
+{% endif %} {% endcomment %}
+
+<hr>

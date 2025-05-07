@@ -1,0 +1,18 @@
+{% extends "course_logs/index.html" %}
+
+{% block content %}
+
+    <div class="new-tag">
+
+        <h4>Define a new Category: </h4>
+
+        <form action="{% url 'course_logs:new_category' %}" method='post'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button name="submit" >Add Category</button>
+        </form>
+
+    </div>
+
+
+{% endblock content %}

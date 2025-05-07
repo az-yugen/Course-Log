@@ -1,0 +1,28 @@
+{% extends "course_logs/index.html" %}
+
+{% block content %}
+
+
+    <div class="all-tags-container">
+        
+        <div class="all-tags-head">
+            <h4>All defined events</h4>
+            <a href="{% url 'course_logs:new_course' %}">Add</a>
+        </div>
+
+        <div class="all-tags-body">
+            <ul>
+                {% for category in categories %}
+                    <li class="entry-tag"><a href="{% url 'course_logs:this_category' category.id %}"> {{category}} </a></li>
+                {% empty %}
+                    <li>No defined categories yet</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    {% comment %} <h3><a href="{% url 'learning_logs:new_category' %}">Define a new category</a></h3> {% endcomment %}
+{% endblock content %}

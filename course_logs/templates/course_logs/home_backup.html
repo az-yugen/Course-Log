@@ -1,0 +1,75 @@
+{% extends "course_logs/index.html" %}
+
+
+{% block content %}
+
+<div class="home-container">
+
+    <div class="container-sidebar">
+
+        <div class="sidebar-courses">
+            <h4>Courses</h4>
+
+            <div>
+                <a href="{% url 'course_logs:all_courses' %}">All</a>
+            </div>
+
+            {% for course in courses %}
+                <div>
+                    <a href="{% url 'course_logs:this_course' course.id %}"> {{course}} </a>
+                    {% comment %} <a href="{% url 'course_logs:home' %}?q={{course.course}}">{{course.course}}</a> {% endcomment %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="sidebar-events">
+            <h4>Events</h4>
+
+            <div>
+                <a href="{% url 'course_logs:all_categories' %}">All</a>
+            </div>
+
+            {% for category in categories %}
+                <div>
+                    <a href="{% url 'course_logs:this_category' category.id %}"> {{category}} </a>
+                    {% comment %} <a href="{% url 'course_logs:home' %}?q={{category.category}}">{{category.category}}</a> {% endcomment %}
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+    <div class="container-entries">
+
+        <div class="entries-header">
+            <h4> Entries </h4>
+            <a href="{% url 'course_logs:new_entry' %}">Add a new entry</a>
+        </div>
+
+        <div>
+            {% for entry in entries %}
+            <div class="entries-main">
+                <div>
+                    <small>{{entry.date|date:"Y, M d, D"}}</small>
+                </div>
+                <div>
+                    <a href="{% url 'course_logs:this_course' entry.course.id %}">{{entry.course}}</a>
+                </div>
+                <div>
+                    <a href="{% url 'course_logs:this_category' entry.category.id %}">{{entry.category}}</a>
+                </div>
+                <div>
+                    <small>{{ entry.description }}</small>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+    
+</div>
+
+{% endblock %}

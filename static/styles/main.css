@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GENERAL */
+
+
+
+* {
+    font-family: "Inter";
+    background-color: var(--COLORBG);
+}
+
+:root {
+    color-scheme: normal;
+    --COLORBG: rgb(248,246,245);
+    --COLORTEXT: rgb(50, 50, 50);
+    --COLORPLC: #93C11C;
+    --COLORFIO: #FB872B;
+    --COLORADOBE: #ED2224;
+    --COLORBLENDER: #EA7600;
+    --COLORPYTHON: #ffde57;
+    --COLORTKINTER: #29ABE2;
+    --COLORJUPYTER: #646464;
+    --COLORPROTEUS: #23C0EF;
+    --COLORX: lightslategray;
+    /* color-scheme: dark light; */
+    /* --BOOK-B: 50px;
+    --BOOK-H: 280px;
+    --BOOK-W: 190px; */
+}
+
+
+.navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 5%;
+
+}
+
+.title {
+    /* font-size: x-large; */
+    font-weight: 800;
+    color: #282929;
+}
+
+a {
+    color: #0066CC;
+    text-decoration: none;
+}
+
+
+hr {
+    color: lightgray;
+    margin: 0 30%;
+}
+
+
+
+
+
+
+
+/* HOME */
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 5% 5%;
+
+}
+
+table {
+    width: 70%;
+    /* flex-grow: 3; */
+    flex-basis: 700px;
+    min-width: 500px;
+}
+
+td {
+    text-align: left;
+}
+
+td a {
+    font-size: small;
+}
+
+tr th {
+    text-transform: capitalize;
+    font-size: small;
+}
+
+
+.entry-tag > a, .this-entry-tags > a {
+    padding: 2px 5px 2px 5px;
+    background-color: rgba(179, 205, 239, 0.955);
+    color: rgb(32, 32, 32);
+    font-weight: 600;
+}
+
+
+.entry-desc > a {
+    color: gray;
+}
+
+.entry-desc > a:hover {
+    color: rgb(63, 76, 89)
+}
+
+
+
+tbody td:nth-child(1) {
+    width: fit-content;
+    text-wrap: nowrap;
+    font-size: small;
+    font-weight: 800;
+    color:#282929;
+}
+
+tbody td:nth-child(2) {
+    width: fit-content;
+    text-wrap: nowrap;
+}
+
+tbody td:nth-child(3) {
+    width: fit-content;
+    text-wrap: nowrap;
+}
+
+
+
+
+
+
+/* ALL COURSES */
+
+.all-tags-container, .this-entry-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 5%;
+}
+
+.all-tags-head {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 500px;
+    min-width: 400px;
+    
+}
+
+
+.all-tags-body {
+    max-width: 500px;
+    min-width: 400px;
+}
+
+
+
+.this-entry-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.this-entry-body div > small {
+    text-wrap: nowrap;
+}
+
+/* .all-tags-body ul li a {
+    background-color: rgba(179, 205, 239, 0.955);
+    color: rgb(32, 32, 32);
+    font-weight: 600;
+    font-size: medium;
+    padding: 2px 5px;
+    margin: 2px 0;
+} */
+
+
+.new-tag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 5%;
+}
+
+
+.this-entry-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: lightgray solid 2px;
+    border-radius: 5px; */
+    padding: 0 3% 3% 3%;
+    max-width: 600px;
+    /* min-width: 100px; */
+}
+
+.this-entry-body {
+    margin: 0 0 20px 0;
+}
+
+
+
+
+
+/*  BUTTONS  */
+
+button {
+  appearance: button;
+  background-color: rgba(179, 205, 239, 0.955);
+  border: 2px solid rgb(179, 205, 239);
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.15;
+  overflow: visible;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: all 80ms ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+}
+
+button:disabled {
+  opacity: .5;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  background-color: rgb(192, 214, 242);
+  border-color: rgba(192, 214, 242, 0.8);
+  color: rgba(0, 0, 0, 0.8)
+}
+
+button:active {
+  background-color: rgb(200, 220, 244);
+  border-color: rgba(200, 220, 244, 0.8);
+  color: rgb(0, 0, 0, 0.65);
+}
