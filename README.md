@@ -1,6 +1,6 @@
 # School Course Log with Django
 - minimal
-- response
+- responsive
 
 
 ### Overview
